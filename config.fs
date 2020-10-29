@@ -4,6 +4,10 @@ user: AID_ROOT
 group: AID_SHELL
 caps: 0
 
+
+[AID_VENDOR_QRTR]
+value:2906
+
 [prism/]
 mode: 0771
 user: AID_ROOT

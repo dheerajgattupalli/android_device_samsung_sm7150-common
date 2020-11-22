@@ -1,1 +1,9 @@
 attribute hal_perf;
+
+attribute vendor_hal_qconfig;
+attribute vendor_hal_qconfig_client;
+attribute vendor_hal_qconfig_server;
+
+attribute vendor_hal_diaghal;
+attribute vendor_hal_diaghal_client;
+attribute vendor_hal_diaghal_server;

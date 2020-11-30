@@ -7,7 +7,7 @@ LOCAL_PATH := hardware/samsung/hidl/fingerprint
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.samsung-sm8250
+LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.samsung-sm7150
 LOCAL_MODULE_TAGS  := optional
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/bin
@@ -29,6 +29,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libutils \
     android.hardware.biometrics.fingerprint@2.1
+
+LOCAL_POST_INSTALL_CMD := mkdir -p $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/lib64
+LOCAL_POST_INSTALL_CMD += ; touch $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/lib64/android.hardware.biometrics.fingerprint@2.1.so
 
 include $(BUILD_EXECUTABLE)
 
